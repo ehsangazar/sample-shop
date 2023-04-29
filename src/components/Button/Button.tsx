@@ -1,9 +1,9 @@
 import { Button } from "@chakra-ui/react"
 
 interface ButtonProps {
-  buttonType: string;
+  buttonType?: string;
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const ButtonComponent = ({
@@ -11,10 +11,16 @@ const ButtonComponent = ({
   children,
   onClick,
 }: ButtonProps) => {
+
+  const handleClick = () => {
+    console.log('Button is Clicked ')
+    onClick && onClick()
+  }
+
   return (
     <Button
       colorScheme={buttonType}
-      onClick={onClick}
+      onClick={handleClick}
     >
     {children}
   </Button>
