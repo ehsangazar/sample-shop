@@ -1,10 +1,11 @@
 import type { StorybookConfig } from '@storybook/nextjs'
 const config: StorybookConfig = {
-    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+    stories: ['../src/**/*.mdx', '../src/**/*.stories.tsx'],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
+        '@chakra-ui/storybook-addon'
     ],
     framework: {
         name: '@storybook/nextjs',
@@ -13,5 +14,8 @@ const config: StorybookConfig = {
     docs: {
         autodocs: 'tag',
     },
+    features: {
+      emotionAlias: false,
+    }
 }
 export default config
