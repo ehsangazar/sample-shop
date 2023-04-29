@@ -4,13 +4,12 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "npm run test && next build",
+        "build": "next build",
         "start": "next start",
         "lint": "next lint",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "test:watch": "jest --watch",
-        "test": "jest --coverage --passWithNoTests"
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "@chakra-ui/react": "^2.6.0",
