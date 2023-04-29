@@ -1,3 +1,4 @@
+import HeadingComponent from '@/components/Heading/Heading'
 import Head from 'next/head'
 
 export default function Home() {
@@ -6,9 +7,9 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <>
-      Test
-      </>
+      <HeadingComponent as="h2">
+        Ehsan Gazar
+      </HeadingComponent>
     </>
   )
 }
